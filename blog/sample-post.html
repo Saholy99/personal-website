@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Machine Learning Fundamentals - Sahil Parikh</title>
+    <link rel="stylesheet" href="../styles.css">
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        .blog-post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            line-height: 1.8;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 20px;
+        }
+        .blog-meta {
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .blog-content h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .blog-content h3 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: #495057;
+        }
+        .blog-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .blog-content code {
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9em;
+        }
+        .blog-content pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .blog-content blockquote {
+            border-left: 4px solid #007bff;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-post-content">
+        <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+        
+        <div class="blog-header">
+            <h1>Understanding Machine Learning Fundamentals</h1>
+            <p class="blog-meta">Published on January 15, 2024 • 8 min read</p>
+        </div>
+
+        <div class="blog-content">
+            <p>Machine learning has become one of the most transformative technologies of our time. In this post, I'll explore some fundamental concepts that form the backbone of modern ML systems.</p>
+
+            <h2>The Mathematical Foundation</h2>
+            
+            <p>At its core, machine learning is about finding patterns in data through mathematical optimization. Consider a simple linear regression problem where we want to find the best line to fit our data points.</p>
+
+            <p>The goal is to minimize the cost function:</p>
+            
+            $$J(\theta) = \frac{1}{2m} \sum_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)})^2$$
+
+            <p>Where:</p>
+            <ul>
+                <li>$\theta$ represents our model parameters</li>
+                <li>$h_\theta(x)$ is our hypothesis function</li>
+                <li>$m$ is the number of training examples</li>
+                <li>$(x^{(i)}, y^{(i)})$ are our training data points</li>
+            </ul>
+
+            <h2>Gradient Descent</h2>
+
+            <p>To minimize this cost function, we use gradient descent. The update rule is elegantly simple:</p>
+
+            $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$$
+
+            <p>The learning rate $\alpha$ controls how big steps we take towards the minimum. Too large, and we might overshoot; too small, and convergence becomes painfully slow.</p>
+
+            <h3>A Practical Example</h3>
+
+            <p>Let's say we're predicting house prices based on size. Our hypothesis function might be:</p>
+
+            $$h_\theta(x) = \theta_0 + \theta_1 \cdot x$$
+
+            <p>Where $x$ is the house size and $\theta_0, \theta_1$ are parameters we need to learn.</p>
+
+            <blockquote>
+                "The beauty of machine learning lies not just in its mathematical elegance, but in its ability to discover patterns that humans might never notice."
+            </blockquote>
+
+            <h2>Beyond Linear Models</h2>
+
+            <p>While linear regression is a great starting point, real-world problems often require more sophisticated approaches. Neural networks, for instance, can approximate any continuous function given enough hidden units (universal approximation theorem).</p>
+
+            <p>A simple neural network with one hidden layer can be represented as:</p>
+
+            $$f(x) = \sigma(W_2 \sigma(W_1 x + b_1) + b_2)$$
+
+            <p>Where $\sigma$ is an activation function (like ReLU or sigmoid), and $W_1, W_2, b_1, b_2$ are learnable parameters.</p>
+
+            <h2>Key Takeaways</h2>
+
+            <p>Understanding these fundamentals provides a solid foundation for diving deeper into machine learning:</p>
+
+            <ol>
+                <li><strong>Mathematics matters</strong>: Linear algebra, calculus, and statistics are your best friends</li>
+                <li><strong>Start simple</strong>: Master linear models before jumping to deep learning</li>
+                <li><strong>Intuition is key</strong>: Always try to understand what your model is actually doing</li>
+                <li><strong>Practice regularly</strong>: Implement algorithms from scratch to truly understand them</li>
+            </ol>
+
+            <p>In future posts, I'll dive deeper into specific algorithms and share insights from my own projects. Stay tuned!</p>
+
+            <hr style="margin: 40px 0; border: none; border-top: 1px solid #e9ecef;">
+            
+            <p style="text-align: center; color: #6c757d; font-style: italic;">
+                Thanks for reading! Feel free to reach out if you have questions or want to discuss these concepts further.
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
