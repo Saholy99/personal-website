@@ -159,7 +159,9 @@ p {
 .work-link {
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
 }
 
 .work-link:hover .work-item {
@@ -176,6 +178,8 @@ p {
     border-left: 4px solid #007bff;
     max-width: 800px;
     transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .work-meta {
