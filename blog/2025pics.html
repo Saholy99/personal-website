@@ -172,6 +172,10 @@
     </div>
 
     <script>
+        // Apply theme from localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+
         document.addEventListener('DOMContentLoaded', function() {
             const galleryImages = document.querySelectorAll('.photo-gallery img');
             const lightbox = document.getElementById('lightbox');

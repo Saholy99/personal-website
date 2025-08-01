@@ -12,7 +12,6 @@
             <h1>Sahil Parikh</h1>
             <nav class="tab-navigation">
                 <button class="tab-btn active" data-tab="home">Home</button>
-                <button class="tab-btn" data-tab="work">Work</button>
                 <button class="tab-btn" data-tab="projects">Projects</button>
                 <button class="tab-btn" data-tab="blog">Blog</button>
                 <button class="tab-btn" data-tab="contact">Contact</button>
@@ -22,40 +21,13 @@
         <main class="content">
             <!-- Home Tab -->
             <div class="tab-content active" id="home">
-                <h2>Welcome!</h2>
                 <p>Hi! I'm Sahil Parikh.</p>
-                
-                <div class="about-me">
-                    <h3>About Me</h3>
-                    <p>I'm an undergraduate student studying statistics + machine learning and computer science at Carnegie Mellon University. </p>
-                </div>
-            </div>
-
-            <!-- Work Tab -->
-            <div class="tab-content" id="work">
-                <h2>Work Experience</h2>
-                
-                <a href="https://www.meta.com/about/" target="_blank" class="work-link">
-                    <div class="work-item">
-                        <h3>Software Engineer Intern</h3>
-                        <p class="work-meta">Meta • May 2025 - August 2025</p>
-                    </div>
-                </a>
-
-                <a href="https://www.homedepot.com/" target="_blank" class="work-link">
-                    <div class="work-item">
-                        <h3>Software Engineer Intern</h3>
-                        <p class="work-meta">The Home Depot • May 2024 - August 2024</p>
-                    </div>
-                </a>
-
-                
+                <p>I'm an undergraduate student studying statistics and machine learning at <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>. </p>
             </div>
 
             <!-- Projects Tab -->
             <div class="tab-content" id="projects">
                 <h2>Projects</h2>
-                <p>I don't have any projects I'm especially proud of just yet, so for now, enjoy the beautifully empty &lt;div&gt;s I threw in as placeholders.</p>
                 
                 <div class="project-item">
                     <h3>Project Name 1</h3>
@@ -67,25 +39,6 @@
                     </div>
                 </div>
 
-                <div class="project-item">
-                    <h3>Project Name 2</h3>
-                    <p class="project-meta">Technology Stack • Year</p>
-                    <p>Another project description. Focus on the impact and technical challenges you overcame.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <h3>Project Name 3</h3>
-                    <p class="project-meta">Technology Stack • Year</p>
-                    <p>Third project description. Highlight what makes this project unique or interesting.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Live Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
             </div>
 
             <!-- Blog Tab -->
@@ -122,9 +75,14 @@
                     <li><a href="https://x.com/sahil_parikh19" target="_blank">Twitter</a></li>
                 </ul>
             </div>
-        </main>
-    </div>
 
     <script src="script.js"></script>
+
+    <div class="theme-switcher">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
 </body>
 </html> 
